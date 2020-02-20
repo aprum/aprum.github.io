@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  width: 70%;
+  width: 100%;
   min-width: 800px;
   margin: 0 auto;
 }
@@ -63,7 +63,7 @@ body > * {
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: #56E5FF;(0,255,0,0.5);
+  background-color: rgb(14, 180, 209);(0,255,0,0.5);
   padding: 1%;
 }
 
@@ -123,7 +123,7 @@ article, section {
 aside {
   flex: 1;
   margin-left: 10px;
-  padding: 1%;
+  padding: 5%;
 }
 
 aside a {
