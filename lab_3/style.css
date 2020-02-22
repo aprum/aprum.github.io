@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  width: 70%;
+  width: 100%;
   min-width: 800px;
-  margin: 0 auto;
+  margin: 10px, 10px;
 }
 
 /* || typography */
