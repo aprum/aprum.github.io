@@ -86,8 +86,9 @@ h1 {
 
 .header-img {
   display: block;
-  height: 60px;
-  padding-top: 20.15px;
+  height: 100px;
+  padding-top: 5px;
+  align-items: center;
 }
 
 .nav {
