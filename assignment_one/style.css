@@ -38,7 +38,6 @@ h2 {
 }
 
 .wrapper {
-    width: 100%;
     height: auto;
     background-color: #f4e8e8;
     border: 3px;
@@ -47,7 +46,6 @@ h2 {
 
 .content{
     display: flex;
-    max-width: 960px;
     justify-content: center;
     /* Testing a bunch of things
     flex-wrap: wrap;
@@ -117,6 +115,7 @@ ol {
 @media only screen and (max-width: 1000px) {
     .content {
         flex-direction: column;
+        justify-content: center;
     }
 
     .row-column {
