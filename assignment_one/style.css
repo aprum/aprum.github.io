@@ -1,0 +1,127 @@
+html {
+    background-color: #df91a4;
+}
+
+.header {
+    display: flex;
+    background-color: #e5b0c3;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 3px;
+    border-color: #df91a4;
+}
+
+.header-img {
+    display: block;
+    height: 100px;
+    border-radius: 50%;
+    padding-right: 3%;
+    max-width: auto;
+}
+
+h1, h2 {
+    color: white;
+    font-family: "Bad Script";
+    text-shadow: 2px 2px #df91a4;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 3%;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    background-color: #f4e8e8;
+    border: 3px;
+    border-color: #df91a4;
+}
+
+.content{
+    display: flex;
+    max-width: 960px;
+    justify-content: center;
+    /* Testing a bunch of things
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px 5px 5px 5px;
+    align-items: center;
+    flex-flow: column wrap;
+    align-content: center;
+    */
+}
+
+.row-column {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.content-img {
+    display: block;
+    height: 200px;
+    width: auto;
+    align-items: center;
+    order: 1;
+    border-radius: 4px;
+    border: solid 1px;
+    
+}
+
+.goal {
+    display: block;
+    background-color: #e5b0c3;
+    color: white;
+    order: 2;
+    padding: 3px 3px 3px 3px;
+    font-size: 20px;
+    font-family: "Poiret One";
+    font-size: 20px;
+    font-weight: bolder;
+    border: 3px;
+    border-color: #df91a4;
+    margin: 15px 15px 15px 15px;
+    height: 90px;
+}
+
+.article {
+    display: block;
+    background-color: #e5b0c3;
+    order: 3;
+    margin: 15px 15px 15px 15px;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 10px;
+    border: 3px;
+    border-color: #df91a4;
+}
+
+ol {
+    color: white;
+    font-size: 20px;
+    font-family: "Poiret One";
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .row-column {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
