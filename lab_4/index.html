@@ -28,7 +28,55 @@
       function clickMe() {
         const content = document.querySelector(".content");
         content.innerHTML = "Hello world";
+
+        // Question 4
+        const newHeading = document.querySelector(".header");
+        newHeading.textContent = "Aranya's Lab 4";
+
+        // Question 6
+        let name = "Aranya";
+        content.innerHTML += "<p>My name has " + name.length + " characters </p>";
+
+        // Question 7 & 8
+        content.innerHTML += "The third character in my name is " + name[2].toUpperCase();
+
+        // Question 9
+        content.innerHTML += "<p>\n</p>";
+
+        // Question 10
+        let lastName = "Prum"
+        content.innerHTML += lastName.slice(lastName.length - 3);
+
+        // Question 11
+        let fullName = "Aranya Prum";
+        let first = fullName.slice(0,6);
+        let last = fullName.slice(7, fullName.length);
+
+        // Question 12
+        let length = first.length + last.length;
+
+        // Question 13
+        newHeading.textContent += " " + length;
+        
       }
+
+      // Question 5
+      const paragraph = document.querySelector(".content")
+      paragraph.innerHTML += "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+      // 1 let paragraph = document.getElementsByClassName("content");
+      //paragraph[0].innerHTML +=
+        //"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+      // 2 let newDiv1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+      // 3 let newDiv2 = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+      // 4 paragraph[0].innerHTML += newDiv1;
+      // 5 paragraph[0].innerHTML += newDiv2;
+
+      // Question 6
+      //let myName = "My name has 6 characters.";
+      //paragraph[0].innerHTML += myName;
+
+    
     </script>
   </body>
 </html>
