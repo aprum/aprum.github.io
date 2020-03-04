@@ -31,14 +31,14 @@
 
         // Question 4
         const newHeading = document.querySelector(".header");
-        newHeading.textContent = "Aranya's Lab 4";
+        let name = "Aranya";
+        newHeading.textContent = name + "'s Lab 4";
 
         // Question 5
         content.innerHTML += "<p class =\"newParagraph1\"></p><p class =\"newParagraph2\"></p>";
 
         // Question 6
         const paragraph1 = document.getElementsByClassName("newParagraph1");
-        let name = "Aranya";
         paragraph1[0].innerHTML +=
           "My name has " + name.length + " characters";
 
