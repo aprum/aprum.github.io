@@ -33,40 +33,35 @@
         const newHeading = document.querySelector(".header");
         newHeading.textContent = "Aranya's Lab 4";
 
+        // Question 5
+        content.innerHTML += "<p class =\"newParagraph1\"></p><p class =\"newParagraph2\"></p>";
+
         // Question 6
+        const paragraph1 = document.getElementsByClassName("newParagraph1");
         let name = "Aranya";
-        content.innerHTML +=
-          "<p>My name has " + name.length + " characters </p>";
+        paragraph1[0].innerHTML +=
+          "My name has " + name.length + " characters";
 
         // Question 7 & 8
-        content.innerHTML +=
+        const paragraph2 = document.getElementsByClassName("newParagraph2");
+        paragraph2[0].innerHTML +=
           "The third character in my name is " + name[2].toUpperCase();
-
-        // Question 9
-        content.innerHTML += "<p>\n</p>";
-
-        // Question 10
+    
+        // Question 9 & 10
         let lastName = "Prum";
-        content.innerHTML += lastName.slice(lastName.length - 3);
+        paragraph2[0].innerHTML += "<br>" + lastName.slice(lastName.length - 3) + "</br>";
 
         // Question 11
-        let fullName = "Aranya Prum";
-        let first = fullName.slice(0, 6);
-        let last = fullName.slice(7, fullName.length);
+        const fullName = "Aranya Prum";
+        const first = fullName.slice(0, 6);
+        const last = fullName.slice(7, fullName.length);
 
         // Question 12
-        let length = first.length + last.length;
+        let nameLength = first.length + last.length;
 
         // Question 13
-        newHeading.textContent += " " + length;
+        newHeading.textContent += " " + nameLength;
       }
-
-      // Question 5
-      const paragraph = document.querySelector(".content");
-      paragraph.innerHTML +=
-        '<p class ="newParagraph1">Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>';
-      paragraph.innerHTML +=
-        '<p class ="newParagraph2">Flavor centerpiece plate, delicious ribs bone-in meat, excess chef end. sweet effortlessly pork, low heat smoker soy sauce flavor meat, rice fruit fruit. Romantic fall-off-the-bone butternut chuck rice burgers.';
     </script>
   </body>
 </html>
