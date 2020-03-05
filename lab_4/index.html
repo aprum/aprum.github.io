@@ -35,21 +35,22 @@
         newHeading.textContent = name + "'s Lab 4";
 
         // Question 5
-        content.innerHTML += "<p class =\"newParagraph1\"></p><p class =\"newParagraph2\"></p>";
+        content.innerHTML +=
+          '<p class ="newParagraph1"></p><p class ="newParagraph2"></p>';
 
         // Question 6
         const paragraph1 = document.getElementsByClassName("newParagraph1");
-        paragraph1[0].innerHTML +=
-          "My name has " + name.length + " characters";
+        paragraph1[0].innerHTML += "My name has " + name.length + " characters";
 
         // Question 7 & 8
         const paragraph2 = document.getElementsByClassName("newParagraph2");
         paragraph2[0].innerHTML +=
           "The third character in my name is " + name[2].toUpperCase();
-    
+
         // Question 9 & 10
         let lastName = "Prum";
-        paragraph2[0].innerHTML += "<br>" + lastName.slice(lastName.length - 3) + "</br>";
+        paragraph2[0].innerHTML +=
+          "<br>" + lastName.slice(lastName.length - 3) + "</br>";
 
         // Question 11
         const fullName = "Aranya Prum";
