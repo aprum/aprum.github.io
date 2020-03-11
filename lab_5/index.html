@@ -285,7 +285,7 @@
 
       function clickMe() {
         const content = document.querySelector(".content");
-        content.innerHTML = "Hello world";
+        content.innerHTML = "";
 
         // Question 1
         const newHeading = document.querySelector(".header");
@@ -297,19 +297,17 @@
 
         let empty = [];
         let i = 0;
-        // olClass[0].innerHTML += "<li>test</li>"
 
         for (i = 0; i < 25; i++) {
-          let country = JSON.stringify(countries[Math.floor(Math.random() * countries.length)]);
-          olClass[0].innerHTML += "<li>" + country + "</li>";
-          console.log(country);
+          
+          let randomNum = Math.floor(Math.random() * countries.length);
+          let code = JSON.stringify(countries[randomNum]["code"]);
+          let name = JSON.stringify(countries[randomNum]["name"]);
+          olClass[0].innerHTML += "<li><b>" + code.replace(/\"/g,"") + "</b> " + name.replace(/\"/g,"");
+          //console.log(country);
         }
 
-        //olClass[0].innerHTML = JSON.stringify(countries[Math.floor(Math.random() * countries.length)]);
-
       }
-
-      //olClass[0].innerHTML = JSON.stringify(countries[Math.floor(Math.random() * countries.length)]);
     </script>
   </body>
 </html>
