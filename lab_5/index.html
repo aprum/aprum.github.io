@@ -299,7 +299,7 @@
         let j = 0;
         let countriesCopy = [];
         for (j = 0; j < countries.length; j++) {
-          countriesCopy.push(j);
+          countriesCopy.push(countries[j]);
         }
 
         // Question 5 & 6
@@ -317,8 +317,9 @@
             "</b> " +
             name.replace(/\"/g, "");
         }
+
         // Question 10
-        console.log(countriesCopy);
+        console.log("List of unselected countries", countriesCopy);
       }
     </script>
   </body>
