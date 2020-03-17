@@ -338,18 +338,13 @@
           countriesCopy.pop(countries[randomNum]);
           delete countriesCopy[randomNum];
           // Adds the selected countries to a list
-          //selectedCountries.push({ name: name, code: code });
-
-          if (!selectedCountries.includes(name)) {
-            selectedCountries.push({ name: name, code: code });
-          }
-
+          selectedCountries.push({ name: name, code: code });
           // Sorts selected countries list alphabetically
           selectedCountries.sort(compare);
         }
         //console.log(selectedCountries);
 
-        // Prints selected countries alphabetically
+        // Prints selected countries
         let k = 0;
         for (k = 0; k < selectedCountries.length; k++) {
           let selectedCode = selectedCountries[k]["code"];
