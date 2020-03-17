@@ -295,6 +295,8 @@
         content.innerHTML += '<ol class="countries"></ol>';
         const olClass = document.getElementsByClassName("countries");
 
+        // Question 4
+
         // Making a copy of the countries list
         let j = 0;
         let countriesCopy = [];
@@ -315,38 +317,48 @@
         }
 
         // Question 5 & 6
+        // Generates 25 unique numbers
+        let randomNumsUnique = [];
+        while (randomNumsUnique.length < 25) {
+          let randomNum = Math.floor(Math.random() * countries.length);
+          if (randomNumsUnique.indexOf(randomNum) === -1)
+            randomNumsUnique.push(randomNum);
+        }
+        //console.log(randomNumsUnique);
+
+        // Question  7
         let i = 0;
         let selectedCountries = [];
         for (i = 0; i < 25; i++) {
-          let randomNum = Math.floor(Math.random() * countries.length);
+          //let randomNum = Math.floor(Math.random() * countries.length);
+          let randomNum = randomNumsUnique[i];
           let code = JSON.stringify(countries[randomNum]["code"]);
           let name = JSON.stringify(countries[randomNum]["name"]);
           // Removes the selected country from the countries list
           countriesCopy.pop(countries[randomNum]);
-          //countriesCopy.splice(randomNum, 1);
-          //let unselectedCountries = countriesCopy.filter(country => countriesCopy["name"] != countries[randomNum]["name"]);
-          //let index = countriesCopy.indexOf(countries[randomNum]["name"]);
-          //if (index !== -1) countriesCopy.splice(randomNum, 1);
-          //const index = countries.indexOf(randomNum);
-          //countriesCopy.splice(index, 1);
           delete countriesCopy[randomNum];
           // Adds the selected countries to a list
-          selectedCountries.push({ name: name, code: code });
+          //selectedCountries.push({ name: name, code: code });
+
+          if (!selectedCountries.includes(name)) {
+            selectedCountries.push({ name: name, code: code });
+          }
+
           // Sorts selected countries list alphabetically
           selectedCountries.sort(compare);
         }
-        console.log(selectedCountries);
-        
+        //console.log(selectedCountries);
+
         // Prints selected countries alphabetically
         let k = 0;
         for (k = 0; k < selectedCountries.length; k++) {
           let selectedCode = selectedCountries[k]["code"];
           let selectedName = selectedCountries[k]["name"];
-          // Question 7, 8, 9
+          // Question 8 & 9
           olClass[0].innerHTML +=
-            "<li><b>" +
+            "<li><strong>" +
             selectedCode.replace(/\"/g, "") +
-            "</b> " +
+            "</strong> " +
             selectedName.replace(/\"/g, "");
         }
         //console.log(selectedCountries);
