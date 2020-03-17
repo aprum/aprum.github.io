@@ -323,12 +323,20 @@
           let name = JSON.stringify(countries[randomNum]["name"]);
           // Removes the selected country from the countries list
           countriesCopy.pop(countries[randomNum]);
+          //countriesCopy.splice(randomNum, 1);
+          //let unselectedCountries = countriesCopy.filter(country => countriesCopy["name"] != countries[randomNum]["name"]);
+          //let index = countriesCopy.indexOf(countries[randomNum]["name"]);
+          //if (index !== -1) countriesCopy.splice(randomNum, 1);
+          //const index = countries.indexOf(randomNum);
+          //countriesCopy.splice(index, 1);
+          delete countriesCopy[randomNum];
           // Adds the selected countries to a list
           selectedCountries.push({ name: name, code: code });
           // Sorts selected countries list alphabetically
           selectedCountries.sort(compare);
         }
-
+        console.log(selectedCountries);
+        
         // Prints selected countries alphabetically
         let k = 0;
         for (k = 0; k < selectedCountries.length; k++) {
