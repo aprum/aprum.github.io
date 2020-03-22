@@ -293,7 +293,7 @@
 
         // Question 2 & 3
         content.innerHTML += '<ol class="countries"></ol>';
-        const olClass = document.getElementsByClassName("countries");
+        const olClass = document.querySelector(".countries");
 
         // Question 4
 
@@ -332,17 +332,30 @@
         for (i = 0; i < 25; i++) {
           //let randomNum = Math.floor(Math.random() * countries.length);
           let randomNum = randomNumsUnique[i];
-          let code = JSON.stringify(countries[randomNum]["code"]);
-          let name = JSON.stringify(countries[randomNum]["name"]);
+          //let code = JSON.stringify(countries[randomNum]["code"]);
+          //let name = JSON.stringify(countries[randomNum]["name"]);
+          let code = countries[randomNum]["code"];
+          let name = countries[randomNum]["name"];
           // Removes the selected country from the countries list
-          countriesCopy.pop(countries[randomNum]);
+          //countriesCopy.pop(countries[randomNum]);
           delete countriesCopy[randomNum];
+          //countriesCopy.splice(index,1);
           // Adds the selected countries to a list
           selectedCountries.push({ name: name, code: code });
           // Sorts selected countries list alphabetically
           selectedCountries.sort(compare);
         }
         //console.log(selectedCountries);
+        
+        countriesCopy.filter(Boolean);
+        
+        //let l = 0;
+        //for (l = 0; l < selectedCountries.length; l++){
+          //let index = countries.indexOf(selectedCountries[l]);
+          //console.log(index);
+          //console.log(selectedCountries[l]);
+          //countriesCopy.splice(index, 1);
+        //}
 
         // Prints selected countries
         let k = 0;
@@ -350,7 +363,7 @@
           let selectedCode = selectedCountries[k]["code"];
           let selectedName = selectedCountries[k]["name"];
           // Question 8 & 9
-          olClass[0].innerHTML +=
+          olClass.innerHTML +=
             "<li><strong>" +
             selectedCode.replace(/\"/g, "") +
             "</strong> " +
