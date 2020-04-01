@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Image gallery</title>
+    <title>Mahrshi & Aranya Assignment 2</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Saira&display=swap"
@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <h1> Mahrshi & Aranya </h1>
-    <h2> Image Gallery</h2>
+    <h1>Mahrshi & Aranya</h1>
+    <h2>Image Gallery</h2>
 
     <div class="full-img">
       <img class="displayed-img" src="images/pic1.jpg" />
@@ -20,58 +20,45 @@
       <button class="dark">Darken</button>
     </div>
 
-    <div class="thumb-bar">
+    <div class="thumb-bar"></div>
+    <script>
+      const displayedImage = document.querySelector('.displayed-img');
+      const thumbBar = document.querySelector('.thumb-bar');
 
+      const btn = document.querySelector('button');
+      const overlay = document.querySelector('.overlay');
 
-    </div>
-    <script src="main.js">
-const displayedImage = document.querySelector('.displayed-img');
-const thumbBar = document.querySelector('.thumb-bar');
+      /* Looping through images */
 
-const btn = document.querySelector('button');
-const overlay = document.querySelector('.overlay');
+      for(let i = 1; i <= 5; i++) {
+        const newImage = document.createElement('img');
+        newImage.setAttribute('src', 'images/pic' + i + '.jpg');
+        thumbBar.appendChild(newImage);
+        newImage.onclick = function(e) {
+          displayedImage.src = e.target.src;
+        }
+      }
 
-/* Looping through images */
+      /* Wiring up the Darken/Lighten button */
 
-for(let i = 1; i <= 5; i++) {
-  const newImage = document.createElement('img');
-  newImage.setAttribute('src', 'images/pic' + i + '.jpg');
-  thumbBar.appendChild(newImage);
-  newImage.onclick = function(e) {
-    displayedImage.src = e.target.src;
-  }
-}
+      function darken () {
+        const btnClass = btn.getAttribute('class');
+        if(btnClass === 'dark') {
+          btn.setAttribute('class','light');
+          btn.textContent = 'Lighten';
+          overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        } else {
+          btn.setAttribute('class','dark');
+          btn.textContent = 'Darken';
+          overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+        }
+      }
 
-/* Wiring up the Darken/Lighten button */
-
-function darken () {
-  const btnClass = btn.getAttribute('class');
-  if(btnClass === 'dark') {
-    btn.setAttribute('class','light');
-    btn.textContent = 'Lighten';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
-  } else {
-    btn.setAttribute('class','dark');
-    btn.textContent = 'Darken';
-    overlay.style.backgroundColor = 'rgba(0,0,0,0)';
-  }
-}
-
-btn.addEventListener("click", function() {
-    darken();
-  });
-
-
-
-
-
-
-
-
-
-
+      btn.addEventListener("click", function() {
+          darken();
+        });
     </script>
     <div class="thumb-bar"></div>
-    <script src="main.js"></script>
+  </script>
   </body>
 </html>
