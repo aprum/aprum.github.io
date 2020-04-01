@@ -19,6 +19,8 @@ body {
   display: block;
   width: 640px;
   height: 480px;
+  border: 3px;
+  border-color: black;
 }
 
 .overlay {
@@ -46,4 +48,6 @@ button {
   width: 20%;
   float: left;
   cursor: pointer;
+  border: 3px;
+  border-color: black;
 }
