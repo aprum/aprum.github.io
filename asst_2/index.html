@@ -34,14 +34,16 @@
         const newImage = document.createElement('img');
         newImage.setAttribute('src', 'images/pic' + i + '.jpg');
         thumbBar.appendChild(newImage);
-        newImage.onclick = function(e) {
-          displayedImage.src = e.target.src;
+        const newImageSrc = newImage.getAttribute('src');
+        //console.log(newImageSrc)
+        newImage.onclick = function() {
+          displayedImage.src = newImageSrc;
         }
-      }
+      };
 
       /* Wiring up the Darken/Lighten button */
 
-      function darken () {
+      function changeOverlay() {
         const btnClass = btn.getAttribute('class');
         if(btnClass === 'dark') {
           btn.setAttribute('class','light');
@@ -52,11 +54,12 @@
           btn.textContent = 'Darken';
           overlay.style.backgroundColor = 'rgba(0,0,0,0)';
         }
-      }
+      };
 
       btn.addEventListener("click", function() {
-          darken();
+          changeOverlay();
         });
+
     </script>
     <div class="thumb-bar"></div>
   </script>
