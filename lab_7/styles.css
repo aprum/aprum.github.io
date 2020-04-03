@@ -116,6 +116,8 @@ h3 {
 .custom-popup .leaflet-popup-content-wrapper {
   background-color: #FFB6B6;
   font-family: 'Spartan', sans-serif;
+  border-radius: 25px;
+  border: 2px solid #679B9B
 }
 
 /* Mobile view */
