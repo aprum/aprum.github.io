@@ -74,6 +74,8 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .activate {
@@ -100,4 +102,19 @@ h3 {
 .activate:active {
   position: relative;
   top: 1px;
+}
+
+/* Map styles */
+#map1 {
+  width: 640px;
+  height: 480px;
+  border-radius: 25px;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 1000px) {
+  .content {
+      flex-direction: column;
+      justify-content: center;
+  }
 }
