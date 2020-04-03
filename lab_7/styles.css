@@ -38,7 +38,8 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  background: #fefefe;
+  /*background: #fefefe;*/
+  background-image: url("https://wallpaperaccess.com/full/1092570.jpg");
   border: 1px dashed #ccc;
   margin: 25px;
 
@@ -67,7 +68,8 @@ h3 {
 }
 
 .content {
-  background: #fff;
+  /*background: #fff;*/
+  background-image: url("https://wallpaperaccess.com/full/1092570.jpg");
   border: 2px dotted #444;
   flex-grow: 2;
   flex: 0 0 200px;
@@ -109,6 +111,11 @@ h3 {
   width: 640px;
   height: 480px;
   border-radius: 25px;
+}
+
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: #FFB6B6;
+  font-family: 'Spartan', sans-serif;
 }
 
 /* Mobile view */
